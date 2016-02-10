@@ -1,0 +1,5 @@
+<div class="form-group">
+  <select [ngFormControl]="choice" class="form-control">
+    <option *ngFor="#lang of languages" [value]="lang.code"> {{lang.fullName}}</option>
+  </select>
+</div>

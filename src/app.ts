@@ -1,5 +1,8 @@
 import {bootstrap} from 'angular2/platform/browser';
-import {TradApp} from './app/trad';
+import {Root} from './app/components/root/root';
+import {HTTP_PROVIDERS, JSONP_PROVIDERS} from 'angular2/http';
+import {ROUTER_PROVIDERS} from 'angular2/router';
+import 'rxjs/Rx';
 
 
-bootstrap(TradApp);
+bootstrap(Root, [HTTP_PROVIDERS, JSONP_PROVIDERS, ROUTER_PROVIDERS]);

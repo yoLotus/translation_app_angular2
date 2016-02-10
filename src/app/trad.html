@@ -1,3 +1,23 @@
-<p>
-  trad Works!
-</p>
+<h1>Please type something to translate</h1>
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title row">
+	<language-picker initLang="eng" (languageSelected)="inputCodeLang = $event" class="col-md-3"></language-picker>
+	<language-picker initLang="fra" (languageSelected)="outputCodeLang = $event" class="col-md-offset-3 col-md-3"></language-picker>
+      </h3>
+      <div class="row">
+	<div class="col-md-6">
+	  <div class="form-group">
+	    <textarea rows="10" [ngFormControl]="inputText" class="form-control input-lg"></textarea>
+	  </div>
+	</div>
+	<div class="col-md-6">
+	  <div>
+	    <textarea rows="10" class="form-control input-lg">{{ translation | async }}</textarea>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
